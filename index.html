@@ -9,6 +9,12 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script>
+      const createUrl = () => {
+        const randomString = Math.random().toString(36).substring(10)
+        window.location.search += randomString;
+      }
+    </script>
+    <script>
     (function (n, i, a, v, r, s, c, x, z) {
         x = window.AwsNexusTelemetry = { q: [], n, i, a, v, r, c };
         window[n] = function (c, p) {
@@ -52,6 +58,7 @@
       <button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
       <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page specific JS Error</button>
       <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="createUrl()">Generate Random Url</button>
     </section>
     <section class="main-content">
       <h3>
