@@ -12,6 +12,10 @@
       const createUrl = () => {
         const randomString = Math.random().toString(36).substring(10)
         window.location.search += randomString;
+
+        console.log(window.location.href, "currentURL with appended")
+
+        document.getElementById("randomUrl").href = window.location.href
       }
     </script>
     <script>
@@ -58,7 +62,8 @@
       <button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
       <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page specific JS Error</button>
       <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
-      <button style="font-size: x-large;padding: 5px;" onclick="createUrl()">Generate Random Url</button>
+      <button id="randomUrl" style="font-size: x-large;padding: 5px;" onclick="createUrl()">Generate Random Url</button>
+      <a href="#" class="btn">random Url</a>
     </section>
     <section class="main-content">
       <h3>
