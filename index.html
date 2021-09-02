@@ -23,19 +23,24 @@
         );
     })(
         'nexus',
-        '086e2d3e-f939-46d9-b887-383e64bd0933',
-        'thirdFavoritesTest',
+        'da977754-b6e1-424f-90bd-9e1e5b67a675',
+        'privateAuthTest1',
         '1.0.0',
         'us-west-2',
         'https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',
         {
-            identityPoolId: 'us-west-2:8932a7de-c1bf-442a-8391-2de25406235d',
-            guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-west-2-111563733690-3810727464261-Unauth',
+            
+            
             endpoint: 'https://dataplane.us-west-2.prod.rum.aws.dev',
-            sessionSampleRate: 100,
-            pageIdFormat: 'PAGE_AND_HASH'
+            sessionSampleRate: 0.1
         }
     );
+	    
+window.nexus('setAwsCredentials', {
+accessKeyId: '[AWS_ACCESS_KEY_ID]',
+secretAccessKey: '[AWS_SECRET_ACCESS_KEY]',
+sessionToken: '[AWS_SESSION_TOKEN]'
+});
 </script>
 </script>
   </head>
